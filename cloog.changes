@@ -1,0 +1,30 @@
+* Mon Apr 11 2011 Juha Kallioinen <juha.kallioinen@nokia.com> - 0.15.11
+- updated version to 0.15.11
+
+* Thu Apr 07 2011 Juha Kallioinen <juha.kallioinen@nokia.com> - 0.15.9
+- removed the ExclusiveArch line instead of just commenting it out
+
+* Tue Apr 05 2011 Juha Kallioinen <juha.kallioinen@nokia.com> - 0.15.9
+- also build for arm, updated version to 0.15.9
+
+* Tue Jun 29 2010 Austin Zhang <austin.zhang@intel.com> 0.15.7
+- Only build for ix86 (arm don't need this), also let it keep at
+  prjconf
+- Revoked Jian-feng Ding's modification due to dependency issue
+
+* Tue Mar 23 2010 Jian-feng Ding <jian-feng.ding@intel.com> 0.15.7
+- Remove unused empty main package
+
+* Tue Feb 09 2010 Austin Zhang <austin.zhang@intel.com> 0.15.7-1
+- Initial import into moblin
+- Using spectacle
+
+* Sat Aug 15 2009 Dodji Seketeli <dodji@redhat.com> - 0.15.7-1
+- Update to new upstream version (0.15.7)
+- Do not build from git snapshot anymore. Rather, got the tarball from
+  ftp://gcc.gnu.org/pub/gcc/infrastructure/cloog-ppl-0.15.7.tar.gz
+- The upstream tarball is named cloog-ppl, not cloog. Adjusted thusly.
+- Use system libtool to disable standard rpath
+- Do not try to touch the info file if it's not present. Closes #515929.
+ 
+

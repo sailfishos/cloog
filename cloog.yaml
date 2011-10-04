@@ -1,0 +1,41 @@
+Name: cloog
+Summary: The Chunky Loop Generator
+Version: 0.15.11
+Release: 1
+Group: System/Libraries
+License: GPLv2+
+URL: http://www.cloog.org
+Sources:
+    - "%{name}-ppl-%{version}.tar.gz"
+Description: |
+    CLooG is a software which generates loops for scanning Z-polyhedra. That is,
+    CLooG finds the code or pseudo-code where each integral point of one or more
+    parametrized polyhedron or parametrized polyhedra union is reached. CLooG is
+    designed to avoid control overhead and to produce a very efficient code.
+
+RequiresPreUn:
+    - info
+RequiresPost:
+    - info
+PkgBR:
+    - ppl-devel >= 0.10.2
+    - gmp-devel >= 4.3.2
+    - texinfo >= 4.12
+    - libtool
+Configure: none
+Builder: none
+SubPackages:
+    - Name: ppl-devel
+      Summary: Development tools for the ppl based version of Chunky Loop Generator
+      Group: Development/Libraries
+      Description: |
+          The header files and dynamic shared libraries of the Chunky Loop Generator.
+      Requires:
+          - "%{name}-ppl = %{version}-%{release}"
+          - ppl-devel >= 0.10, gmp-devel >= 4.3.2
+
+    - Name: ppl
+      Summary: Parma Polyhedra Library backend (ppl) based version of the Cloog binaries
+      Group: Development/Libraries
+      Description: The dynamic shared libraries of the Chunky Loop Generator
+
