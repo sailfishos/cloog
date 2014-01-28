@@ -14,6 +14,7 @@ License:    GPLv2+
 URL:        http://www.cloog.org
 Source0:    ftp://gcc.gnu.org/pub/gcc/infrastructure/%{name}-ppl-%{version}.tar.gz
 Source100:  cloog.yaml
+Patch0:     cloog-aarch64.patch
 BuildRequires:  ppl-devel >= 0.10.2
 BuildRequires:  gmp-devel >= 4.3.2
 BuildRequires:  texinfo >= 4.12
@@ -52,7 +53,7 @@ The dynamic shared libraries of the Chunky Loop Generator
 
 %prep
 %setup -q -n %{name}-ppl-%{version}
-
+%patch0 -p1
 # >> setup
 # << setup
 
